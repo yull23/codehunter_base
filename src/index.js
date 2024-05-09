@@ -1,14 +1,15 @@
-import { ElementHtml } from "./elements/html/element-html.js";
+import { elementHtml } from "./elements/html/ElementHtml.js";
 
 function app() {
   const root = document.getElementById("root");
-  const paragraph = new ElementHtml({
+
+  const paragraph = elementHtml({
     typeElement: "p",
     className: "yull",
     textContent: "Hola Mundo",
   });
 
-  root.appendChild(paragraph.element);
+  root.appendChild(paragraph);
 }
 
 app();
