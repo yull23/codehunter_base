@@ -1,4 +1,4 @@
-import { elementHtml } from "./elements/html/ElementHtml.js";
+import { elementHtml } from "./elements/ElementHtml.js";
 
 function app() {
   const root = document.getElementById("root");
@@ -8,6 +8,7 @@ function app() {
     className: "yull",
     textContent: "Hola Mundo",
   });
+  console.log(paragraph.outerHTML);
 
   root.appendChild(paragraph);
 }
