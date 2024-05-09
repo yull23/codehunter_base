@@ -1,4 +1,5 @@
 import { elementHtml } from "./elements/ElementHtml.js";
+import { buttonToggleTheme } from "./pageComponents/button-toggle-theme/button-toggle-theme.js";
 
 function app() {
   const root = document.getElementById("root");
@@ -9,8 +10,8 @@ function app() {
     textContent: "Hola Mundo",
   });
   console.log(paragraph.outerHTML);
-
-  root.appendChild(paragraph);
+  const newButton = buttonToggleTheme();
+  root.appendChild(newButton);
 }
 
 app();

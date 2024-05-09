@@ -4,12 +4,14 @@ const elementHtml = ({
   className = "",
   classBootstrap = "_",
   textContent = "",
+  styles = ``,
 }) => {
   const p = document.createElement(typeElement);
+  const classList = [className, classBootstrap];
   p.id = id;
-  p.className = className;
-  p.classList.add(classBootstrap);
+  p.className = classList.join(" ");
   p.textContent = textContent;
+  p.style.cssText = styles;
   return p;
 };
 
