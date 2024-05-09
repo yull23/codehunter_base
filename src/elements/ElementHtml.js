@@ -5,14 +5,18 @@ const elementHtml = ({
   classBootstrap = "_",
   textContent = "",
   styles = ``,
+  href,
 }) => {
-  const p = document.createElement(typeElement);
+  const element = document.createElement(typeElement);
   const classList = [className, classBootstrap];
-  p.id = id;
-  p.className = classList.join(" ");
-  p.textContent = textContent;
-  p.style.cssText = styles;
-  return p;
+  element.id = id;
+  element.className = classList.join(" ");
+  element.textContent = textContent;
+  element.style.cssText = styles;
+  if (href) {
+    element.href = href;
+  }
+  return element;
 };
 
 export { elementHtml };
