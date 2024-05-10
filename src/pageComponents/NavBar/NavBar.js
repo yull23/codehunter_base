@@ -1,6 +1,6 @@
 import { elementHtml } from "../../elements/ElementHtml.js";
 import { listLinks } from "./00_var-nav-bar.js";
-import { itemLink } from "./item-link.js";
+import { itemLink } from "./ItemLink.js";
 
 function navBarComponent() {
   const navBar = elementHtml({

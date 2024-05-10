@@ -1,6 +1,6 @@
 import { elementHtml } from "./elements/ElementHtml.js";
-import { buttonToggleTheme } from "./pageComponents/button-toggle-theme/button-toggle-theme.js";
-import { navBarComponent } from "./pageComponents/nav-bar.js/nav-bar.js";
+import { buttonToggleTheme } from "./pageComponents/ButtonToggleTheme/ButtonToggleTheme.js";
+import { navBarComponent } from "./pageComponents/NavBar/NavBar.js";
 
 function app() {
   const root = document.getElementById("root");
