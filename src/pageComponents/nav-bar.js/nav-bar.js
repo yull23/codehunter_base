@@ -5,11 +5,14 @@ import { itemLink } from "./item-link.js";
 function navBarComponent() {
   const navBar = elementHtml({
     typeElement: "div",
-    classBootstrap: "d-flex justify-content-between align-items-center",
+    className: "nav-bar",
+    classBootstrap:
+      "d-flex justify-content-between align-items-center bg-dark bg-gradient",
     styles: `
       border:1px solid red;
     `,
   });
+
   listLinks.forEach((e) => {
     const link = itemLink({
       content: e.textContent,
@@ -18,6 +21,9 @@ function navBarComponent() {
 
     navBar.appendChild(link);
   });
+
+  navBar.setAttribute("data-bs-theme", "light");
+  navBar.style.cssText = "color: var(--bs-body-color);";
 
   return navBar;
 }
